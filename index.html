@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#efe8db">
+<title>The Little Prince · Touch Constellation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}}
+:root{{--bg:#efe8db;--ink:#1a1612;--ink-s:#4a3f2f;--ink-f:#8a7d65;--accent:#b03a2e;--gold:#b8860b;}}
+html,body{{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;overflow-x:hidden;}}
+body::before{{content:'';position:fixed;inset:0;background-image:radial-gradient(ellipse at 15% 20%,rgba(184,134,11,.06),transparent 50%),radial-gradient(ellipse at 85% 80%,rgba(176,58,46,.04),transparent 50%),url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:0;mix-blend-mode:multiply;}}
+.page{{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:56px 28px 64px;}}
+.label{{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:14px;}}
+.title{{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(48px,9vw,76px);line-height:.95;letter-spacing:-.03em;text-align:center;margin-bottom:12px;}}
+.title em{{color:var(--accent);font-weight:400;}}
+.sub{{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--ink-s);max-width:480px;margin:0 auto 12px;line-height:1.5;}}
+.lead{{text-align:center;font-family:'Space Grotesk',sans-serif;font-size:11px;color:var(--ink-f);letter-spacing:.25em;text-transform:uppercase;margin-bottom:12px;}}
+.context{{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--accent);margin-bottom:48px;padding:12px 24px;border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:4px;max-width:480px;margin-left:auto;margin-right:auto;}}
+.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:56px;}}
+.card{{position:relative;background:rgba(255,252,244,.7);border:1px solid rgba(26,22,18,.1);border-radius:6px;padding:16px 12px 14px;text-align:center;text-decoration:none;color:inherit;cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s;overflow:hidden;}}
+.card::before{{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--card-c);}}
+.card:hover{{transform:translateY(-3px);box-shadow:0 10px 24px rgba(26,22,18,.1);}}
+.card .orb{{width:56px;height:56px;border-radius:50%;margin:0 auto 10px;background:radial-gradient(circle at 35% 35%,var(--card-l),var(--card-c),var(--card-d));box-shadow:inset -5px -5px 12px rgba(0,0,0,.25),0 3px 10px rgba(26,22,18,.12);position:relative;}}
+.card .orb::after{{content:'';position:absolute;inset:-6px;border:1px dashed var(--card-c);border-radius:50%;opacity:.35;}}
+.card .nm{{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-f);letter-spacing:.1em;margin-bottom:4px;}}
+.card .en{{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:17px;line-height:1.1;margin-bottom:2px;}}
+.card .fr{{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-s);}}
+.card.protag .orb{{width:72px;height:72px;}}
+.card.protag .en{{font-size:19px;}}
+.ft{{text-align:center;padding-top:28px;border-top:1px dashed rgba(26,22,18,.2);}}
+.ft .sig{{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--accent);margin-bottom:8px;}}
+.ft .cr{{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.2em;color:var(--ink-f);text-transform:uppercase;}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="label">Touching the Invisible Narrative</div>
+  <h1 class="title">The Little<br>Prince's <em>Touch</em><br>Constellation</h1>
+  <p class="sub">A multisensory translation of Saint-Exupéry's character network for children with dyslexia.</p>
+  <p class="lead">DESN6001 · Digital Form and Fabrication · 2026</p>
+  <p class="context">Designed for reading-vulnerable children. Each planet is a tactile sculpture whose size and surface encode NLP-extracted text data. Tap any planet to hear its voice.</p>
+  <div class="grid">
+    <a href="prince.html" class="card protag" style="--card-c:#d4a017;--card-l:#f4d57a;--card-d:#8a6308;">
+      <div class="orb"></div>
+      <div class="nm">302 mentions · 50mm</div>
+      <div class="en">The Little Prince</div>
+      <div class="fr">Le Petit Prince</div>
+    </a>
+    <a href="pilot.html" class="card" style="--card-c:#6a8c3a;--card-l:#a8c878;--card-d:#3d5e26;">
+      <div class="orb"></div>
+      <div class="nm">156 mentions · 38mm</div>
+      <div class="en">The Pilot</div>
+      <div class="fr">L'Aviateur</div>
+    </a>
+    <a href="rose.html" class="card" style="--card-c:#c85a6f;--card-l:#f0a8b8;--card-d:#7a2a3d;">
+      <div class="orb"></div>
+      <div class="nm">83 mentions · 34mm</div>
+      <div class="en">The Rose</div>
+      <div class="fr">La Rose</div>
+    </a>
+    <a href="fox.html" class="card" style="--card-c:#c96e3a;--card-l:#e8a878;--card-d:#7a3a14;">
+      <div class="orb"></div>
+      <div class="nm">72 mentions · 32mm</div>
+      <div class="en">The Fox</div>
+      <div class="fr">Le Renard</div>
+    </a>
+    <a href="snake.html" class="card" style="--card-c:#7a7a90;--card-l:#c0c0d0;--card-d:#3a3a50;">
+      <div class="orb"></div>
+      <div class="nm">41 mentions · 26mm</div>
+      <div class="en">The Snake</div>
+      <div class="fr">Le Serpent</div>
+    </a>
+    <a href="king.html" class="card" style="--card-c:#7148b3;--card-l:#b48ed8;--card-d:#3a1f5c;">
+      <div class="orb"></div>
+      <div class="nm">36 mentions · 24mm</div>
+      <div class="en">The King</div>
+      <div class="fr">Le Roi</div>
+    </a>
+    <a href="geographer.html" class="card" style="--card-c:#6a8a52;--card-l:#9aba88;--card-d:#2c4a2c;">
+      <div class="orb"></div>
+      <div class="nm">31 mentions · 22mm</div>
+      <div class="en">The Geographer</div>
+      <div class="fr">Le Géographe</div>
+    </a>
+    <a href="lamplighter.html" class="card" style="--card-c:#c87830;--card-l:#f0bc7c;--card-d:#7a4a08;">
+      <div class="orb"></div>
+      <div class="nm">28 mentions · 22mm</div>
+      <div class="en">The Lamplighter</div>
+      <div class="fr">L'Allumeur</div>
+    </a>
+    <a href="businessman.html" class="card" style="--card-c:#3a6a9c;--card-l:#88aacf;--card-d:#1f3a5c;">
+      <div class="orb"></div>
+      <div class="nm">25 mentions · 20mm</div>
+      <div class="en">The Businessman</div>
+      <div class="fr">L'Homme d'Affaires</div>
+    </a>
+    <a href="vain.html" class="card" style="--card-c:#c89028;--card-l:#f0d488;--card-d:#7a5a18;">
+      <div class="orb"></div>
+      <div class="nm">22 mentions · 20mm</div>
+      <div class="en">The Vain Man</div>
+      <div class="fr">Le Vaniteux</div>
+    </a>
+    <a href="drunkard.html" class="card" style="--card-c:#a85e5e;--card-l:#d89090;--card-d:#4e1f1f;">
+      <div class="orb"></div>
+      <div class="nm">18 mentions · 18mm</div>
+      <div class="en">The Drunkard</div>
+      <div class="fr">Le Buveur</div>
+    </a>
+  </div>
+  <footer class="ft">
+    <div class="sig">"On ne voit bien qu'avec le cœur."</div>
+    <div class="cr">— Antoine de Saint-Exupéry · 1943</div>
+  </footer>
+</main>
+</body>
+</html>
